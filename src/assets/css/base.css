@@ -1,0 +1,47 @@
+:root{
+    /* 全局模块 */
+    --global-color: #333333; /* 全局字体颜色*/
+    --global-active-color: #E50113; /* 全局选中字体颜色*/
+    --global-bg-color: #EFECDE; /* 全局背景颜色*/
+    --global-active-bg-color: #876323; /* 全局选中背景颜色*/
+    --global-high-font-size: 18px; /* 全局大字体 */
+    --global-font-size: 18px; /* 全局普通字体 */
+    --global-low-font-size: 14px; /*  全局小字体*/
+
+    /* 圆角模块*/
+    --global-border-radius: 5px;
+    --global-small-border-radius: 3px;
+    --global-high-border-radius: 10px;
+
+    /* 标题模块 */
+    --title-color: #876323; /* 标题颜色*/
+    --title-acitve-color: #E50113; /*标题选中颜色*/
+    --title-bg-color: #D7D1B4; /* 标题背景色*/
+    --title-active-bg-color: #CFC39F; /* 标题选中背景色*/
+    --title-high-font-size: 24px; /* 标题大字体 */
+    --title-font-size: 22px; /* 标题普通字体 */
+    --title-low-font-size: 20px; /*  标题小字体*/
+
+    /* 按钮模块 */
+
+    --btn-color: #ffffff; /* 按钮默认颜色*/
+    --btn-acitve-color: #E50113; /* 按钮选中颜色*/
+    --btn-deactive-color: #cccccc; /* 按钮置灰颜色*/
+    --btn-bg-color: #CFC39F; /* 按钮默认颜色*/
+    --btn-acitve-bg-color: #E50113; /* 按钮选中颜色*/
+    --btn-deactive-bgcolor: #cccccc; /* 按钮置灰颜色*/
+
+    /* 边框模块*/
+
+    --border-color: #CFC39F; /* 按钮默认颜色*/
+    --border-acitve-color: #E50113; /* 按钮选中颜色*/
+    --border-deactive-color: #cccccc; /* 按钮置灰颜色*/
+}
+body {
+    font-size: 16px;
+    line-height: 28px;
+    font-family: Microsoft Yahei,Verdana;
+    text-rendering: optimizeLegibility;
+    color: #666666;
+    background: #EFECDE;
+}

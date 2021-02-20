@@ -1,23 +1,23 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
 Vue.use(VueRouter)
+import configuration from '@/configuration'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/home'
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/home',
+    name: 'home',
+    component: () => import('views/Home/Home.vue'),
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('views/Login/Login.vue')
+  },
 ]
 
 const router = new VueRouter({
@@ -25,5 +25,13 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
+/* 页面跳转前*/
+router.beforeEach((to, from, next) => {
+  next();
+  // ...
+})
+/* 页面跳转后 */
+router.afterEach((to, from) => {
+  // ...
+})
 export default router

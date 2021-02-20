@@ -1,7 +1,7 @@
 import axios from 'axios'
 import configuration from '@/configuration'
 import Vue from 'vue'
-import {ssoSignFunc, parseQueryString} from './utils' // 获取公共方法
+
 
 axios.defaults.baseURL = configuration.global.serverPath //设置请求地址
 axios.defaults.timeout = configuration.ajaxTimeout * 1000 // 设置超市时间
@@ -55,11 +55,8 @@ const Service = {
             /**
              * 加密
              * */
-            let param = Object.assign({}, paraMap)
-            let bizcode = param['funcNo']
-            delete param['funcNo']
-            let signStr = ssoSignFunc(bizcode, param)
-            let params = parseQueryString(signStr)
+            let params = Object.assign({}, paraMap)
+
 
             /**
              * 设置初始配置
